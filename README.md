@@ -1,0 +1,4 @@
+# fedora-fixes-bugs
+
+## Fedora KDE Black Screen on startup fix:
+*Fixed* Big issue here at 13:44, there is a known issue with lots of hardware that the kde desktop does not load and you just sit on a black screen after install. If this happens to you, you will need to reboot, on the grub page, hit "e" and add the word "nomodeset" after the word "quiet". Once you do that it will boot in the fallback desktop. *Don't try to install any drivers*. Just run the system upgrade and it will resolve the missing dependencies for your hardware. Then let it reboot. This will fix the blank screen issue, and boot correctly to your login page and functioning kde desktop. From there you can install your GPU drivers. For nvidia it would be "sudo dnf install nvidia-drivers" Then you can run nvidia-smi to verify that the driver installed.
